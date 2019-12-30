@@ -1,0 +1,41 @@
+<div class="container" [class.mobile]="mobileQuery.matches">
+    <mat-toolbar class="toolbar">
+      <button mat-icon-button (click)="snav.toggle()"><mat-icon class="white-icon">apps</mat-icon></button>
+      <h1 class="app-name">Keppel</h1>
+    <h1 class="route-name">{{headerTitle}}</h1>
+    </mat-toolbar>
+
+    <mat-sidenav-container class="sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+      <mat-sidenav class="sideNav" #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+        <mat-nav-list *ngFor="let item of menuItems">
+
+          <mat-list-item class="sidenav-list" *ngIf="item.subMenus.length == 0; else withSubMenu">
+
+              <a class="a-list" mat-list-item routerLink="." [routerLink]="item.url" [routerLinkActive]="'active'">{{item.item}}</a>
+
+          </mat-list-item>
+
+          <ng-template  #withSubMenu>
+                <mat-accordion *ngIf="item.subMenus.length > 0">
+                  <mat-expansion-panel class="list-acc mat-elevation-z0" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header class="disable_ripple">
+                      <mat-panel-title class="list-acc-title">
+                        <a class="a-list" mat-list-item routerLink="." [routerLink]="item.url" [routerLinkActive]="'active'">{{item.item}}</a>
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+
+                      <mat-list-item class="sidenav-list" *ngFor="let subItem of item.subMenus">
+                        <a class="a-list" mat-list-item [routerLink]="subItem.url" [routerLinkActive]="'active'">{{ subItem.item }}</a>
+                      </mat-list-item>
+
+                  </mat-expansion-panel>
+                </mat-accordion>
+          </ng-template>
+        </mat-nav-list>
+      </mat-sidenav>
+
+      <mat-sidenav-content class="sidenav-content">
+        <router-outlet></router-outlet>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>

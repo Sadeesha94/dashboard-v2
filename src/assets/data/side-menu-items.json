@@ -1,0 +1,60 @@
+[
+    {
+        "item": "DCS Dashboard",
+        "url": "/dcs-dashboard",
+        "subMenus": [
+            {
+              "item": "Changi",
+              "url": "/plant-dashboard"
+            },
+            {
+              "item": "Biopolis",
+              "url": "/plant-dashboard"
+            },
+            {
+              "item": "Woodlands",
+              "url": "/plant-dashboard"
+            },
+            {
+              "item": "Mediapolic",
+              "url": "/plant-dashboard"
+            }
+        ]
+    },
+    {
+        "item": "RCM Dashboard",
+        "url": "/rcm-dashboard",
+        "subMenus": [
+          {
+            "item": "Changi",
+            "url": "/plant-dashboard"
+          },
+          {
+            "item": "Biopolis",
+            "url": "/plant-dashboard"
+          },
+          {
+            "item": "Woodlands",
+            "url": "/plant-dashboard"
+          },
+          {
+            "item": "Mediapolic",
+            "url": "/plant-dashboard"
+          }
+        ]
+    },
+    {
+        "item": "Billing",
+        "url": "/overall-billing",
+        "subMenus": [
+            {
+                "item": "DCS",
+                "url": "/dcs-billing"
+            },
+            {
+                "item": "RCM",
+                "url": "/rcm-billing"
+            }
+        ]
+    }
+]

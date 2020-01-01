@@ -7,6 +7,10 @@ import { RcmBillingComponent } from './billing/rcm-billing/rcm-billing.component
 import { DcsBillingComponent } from './billing/dcs-billing/dcs-billing.component';
 import { PlantDashboardComponent } from './dashboards/plant-dashboard/plant-dashboard.component';
 import { OverallBillingComponent } from './billing/overall-billing/overall-billing.component';
+import { ChangiPlantComponent } from './dashboards/plants/changi-plant/changi-plant.component';
+import { BiopolisPlantComponent } from './dashboards/plants/biopolis-plant/biopolis-plant.component';
+import { MediapolicPlantComponent } from './dashboards/plants/mediapolic-plant/mediapolic-plant.component';
+import { WoodlandsPlantComponent } from './dashboards/plants/woodlands-plant/woodlands-plant.component';
 
 
 const routes: Routes = [
@@ -16,7 +20,11 @@ const routes: Routes = [
   { path: 'rcm-billing', component: RcmBillingComponent, data: { title: 'RCM-Billing' } },
   { path: 'dcs-billing', component: DcsBillingComponent, data: { title: 'DCS-Billing' } },
   { path: 'plant-dashboard/:plantName', component: PlantDashboardComponent, data: { title: 'Plant-Dashboard' } },
-  { path: 'overall-billing', component: OverallBillingComponent, data: { title: 'Overall-Dashboard' } }
+  { path: 'overall-billing', component: OverallBillingComponent, data: { title: 'Overall-Dashboard' } },
+  { path: 'ChangiPlant', component: ChangiPlantComponent, data: { title: 'ChangiPlant-Dashboard' } },
+  { path: 'BiopolisPlant', component: BiopolisPlantComponent, data: { title: 'BiopolisPlant-Dashboard' } },
+  { path: 'WoodlandsPlant', component: WoodlandsPlantComponent, data: { title: 'WoodlandsPlant-Dashboard' } },
+  { path: 'MediapolicPlant', component: MediapolicPlantComponent, data: { title: 'MediapolicPlant-Dashboard' } }
 ];
 
 @NgModule({

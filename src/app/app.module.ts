@@ -25,6 +25,10 @@ import { RcmBillingComponent } from './billing/rcm-billing/rcm-billing.component
 import { DcsBillingComponent } from './billing/dcs-billing/dcs-billing.component';
 import { PlantDashboardComponent } from './dashboards/plant-dashboard/plant-dashboard.component';
 import { OverallBillingComponent } from './billing/overall-billing/overall-billing.component';
+import { ChangiPlantComponent } from './dashboards/plants/changi-plant/changi-plant.component';
+import { BiopolisPlantComponent } from './dashboards/plants/biopolis-plant/biopolis-plant.component';
+import { WoodlandsPlantComponent } from './dashboards/plants/woodlands-plant/woodlands-plant.component';
+import { MediapolicPlantComponent } from './dashboards/plants/mediapolic-plant/mediapolic-plant.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +39,11 @@ import { OverallBillingComponent } from './billing/overall-billing/overall-billi
     RcmBillingComponent,
     DcsBillingComponent,
     PlantDashboardComponent,
-    OverallBillingComponent
+    OverallBillingComponent,
+    ChangiPlantComponent,
+    BiopolisPlantComponent,
+    WoodlandsPlantComponent,
+    MediapolicPlantComponent
   ],
   imports: [
     BrowserModule,

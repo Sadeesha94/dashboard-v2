@@ -15,16 +15,16 @@ import { WoodlandsPlantComponent } from './dashboards/plants/woodlands-plant/woo
 
 const routes: Routes = [
   { path: '', redirectTo: 'dcs-dashboard', pathMatch: 'full' },
-  { path: 'dcs-dashboard', component: DcsDashboardComponent, data: { title: 'DCS-Dashboard' } },
-  { path: 'rcm-dashboard', component: RcmDashboardComponent, data: { title: 'RCM-Dashboard' } },
-  { path: 'rcm-billing', component: RcmBillingComponent, data: { title: 'RCM-Billing' } },
-  { path: 'dcs-billing', component: DcsBillingComponent, data: { title: 'DCS-Billing' } },
-  { path: 'plant-dashboard/:plantName', component: PlantDashboardComponent, data: { title: 'Plant-Dashboard' } },
-  { path: 'overall-billing', component: OverallBillingComponent, data: { title: 'Overall-Dashboard' } },
-  { path: 'ChangiPlant', component: ChangiPlantComponent, data: { title: 'ChangiPlant-Dashboard' } },
-  { path: 'BiopolisPlant', component: BiopolisPlantComponent, data: { title: 'BiopolisPlant-Dashboard' } },
-  { path: 'WoodlandsPlant', component: WoodlandsPlantComponent, data: { title: 'WoodlandsPlant-Dashboard' } },
-  { path: 'MediapolicPlant', component: MediapolicPlantComponent, data: { title: 'MediapolicPlant-Dashboard' } }
+  { path: 'dcs-dashboard', component: DcsDashboardComponent, data: { title: 'DCS Dashboard' } },
+  { path: 'rcm-dashboard', component: RcmDashboardComponent, data: { title: 'RCM Dashboard' } },
+  { path: 'rcm-billing', component: RcmBillingComponent, data: { title: 'RCM Billing' } },
+  { path: 'dcs-billing', component: DcsBillingComponent, data: { title: 'DCS Billing' } },
+  { path: 'plant-dashboard/:plantName', component: PlantDashboardComponent, data: { title: 'Plant Dashboard' } },
+  { path: 'overall-billing', component: OverallBillingComponent, data: { title: 'Overall Dashboard' } },
+  { path: 'ChangiPlant', component: ChangiPlantComponent, data: { title: 'Changi Plant' } },
+  { path: 'BiopolisPlant', component: BiopolisPlantComponent, data: { title: 'Biopolis Plant' } },
+  { path: 'WoodlandsPlant', component: WoodlandsPlantComponent, data: { title: 'Woodlands Plant' } },
+  { path: 'MediapolicPlant', component: MediapolicPlantComponent, data: { title: 'Mediapolic Plant' } }
 ];
 
 @NgModule({

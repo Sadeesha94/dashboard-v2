@@ -30,6 +30,16 @@ import { BiopolisPlantComponent } from './dashboards/plants/biopolis-plant/biopo
 import { WoodlandsPlantComponent } from './dashboards/plants/woodlands-plant/woodlands-plant.component';
 import { MediapolicPlantComponent } from './dashboards/plants/mediapolic-plant/mediapolic-plant.component';
 
+import { FusionChartsModule } from 'angular-fusioncharts';
+
+
+import * as FusionCharts from 'fusioncharts';
+import * as charts from 'fusioncharts/fusioncharts.charts';
+import * as FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
+
+
+FusionChartsModule.fcRoot(FusionCharts, charts, FusionTheme);
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +69,8 @@ import { MediapolicPlantComponent } from './dashboards/plants/mediapolic-plant/m
     MatInputModule,
     MatGridListModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    FusionChartsModule
   ],
   providers: [
     SideMenuItemsService,

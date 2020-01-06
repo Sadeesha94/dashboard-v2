@@ -28,9 +28,16 @@ export class SideBarComponent implements OnInit {
     this.mobileQuery = media.matchMedia("(max-width: 600px)");
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
+
+    this.router.events.pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe((event) => {
+        this.headerTitle = this.getTitle(this.router.routerState, this.router.routerState.root).join(' | ');
+        this.titleService.setTitle(this.headerTitle);
+      }
+      );
   }
 
-  ngOnDestroy(): void {
+  OnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
@@ -39,13 +46,6 @@ export class SideBarComponent implements OnInit {
       this.menuItems = items;
 
     });
-    this.router.events.pipe(filter((event) => event instanceof NavigationEnd))
-      .subscribe((event) => {
-        const title = this.getTitle(this.router.routerState, this.router.routerState.root).join(' | ');
-        this.titleService.setTitle(title);
-      }
-      );
-
   }
 
   getTitle(state, parent) {

@@ -1,35 +1,35 @@
 
 
 <div class="container">
-  <mat-grid-list cols="2" rowHeight="450px">
+  <mat-grid-list cols="1" rowHeight="450px">
 
     <mat-grid-tile colspan="1" rowspan="1">
       <mat-card class="example-card">
-        <fusioncharts width="700" height="400" type="Pie3d" [dataSource]="dataSource">
+        <fusioncharts width="700" height="400" type="Pie3d" [dataSource]="dataSource" dataFormat="json" >
+        </fusioncharts>
+      </mat-card>
+    </mat-grid-tile>
+
+    <!-- <mat-grid-tile colspan="1" rowspan="1">
+      <mat-card class="example-card">
+        <fusioncharts width="700" height="400" type="Column3d" [dataSource]="dataSource" dataFormat="json">
         </fusioncharts>
       </mat-card>
     </mat-grid-tile>
 
     <mat-grid-tile colspan="1" rowspan="1">
       <mat-card class="example-card">
-        <fusioncharts width="700" height="400" type="Column3d" [dataSource]="dataSource">
+        <fusioncharts width="700" height="400" type="Doughnut3D" [dataSource]="dataSource" dataFormat="json">
         </fusioncharts>
       </mat-card>
     </mat-grid-tile>
 
     <mat-grid-tile colspan="1" rowspan="1">
       <mat-card class="example-card">
-        <fusioncharts width="700" height="400" type="Doughnut3D" [dataSource]="dataSource">
+        <fusioncharts width="700" height="400" type="Bar3D" [dataSource]="dataSource" dataFormat="json">
         </fusioncharts>
       </mat-card>
-    </mat-grid-tile>
-
-    <mat-grid-tile colspan="1" rowspan="1">
-      <mat-card class="example-card">
-        <fusioncharts width="700" height="400" type="Bar3D" [dataSource]="dataSource">
-        </fusioncharts>
-      </mat-card>
-    </mat-grid-tile>
+    </mat-grid-tile> -->
 
   </mat-grid-list>
 </div>

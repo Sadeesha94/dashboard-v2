@@ -2,7 +2,7 @@
   {
     "plant-name": "changi",
     "plantId": 1,
-    "chart-data": [
+    "chart_data": [
       {
         "label": "Venezuela",
         "value": "290"
@@ -34,6 +34,44 @@
       {
         "label": "China",
         "value": "30"
+      }
+    ]
+  },
+  {
+    "plant-name": "biopolic",
+    "plantId": 2,
+    "chart_data": [
+      {
+        "label": "Venezuela",
+        "value": "100"
+      },
+      {
+        "label": "Saudi",
+        "value": "200"
+      },
+      {
+        "label": "Canada",
+        "value": "180"
+      },
+      {
+        "label": "Iran",
+        "value": "50"
+      },
+      {
+        "label": "Russia",
+        "value": "40"
+      },
+      {
+        "label": "UAE",
+        "value": "500"
+      },
+      {
+        "label": "US",
+        "value": "200"
+      },
+      {
+        "label": "China",
+        "value": "112"
       }
     ]
   }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { SideMenuItemsService } from 'src/app/services/side-menu-items.service';
 
 @Component({
@@ -8,32 +8,30 @@ import { SideMenuItemsService } from 'src/app/services/side-menu-items.service';
 })
 export class PlantDashboardComponent implements OnInit {
 
-  dataItem: any = [];
-  dataSource: object;
+
+  @Input() dataSource: any = {
+            chart: {
+              caption: "Countries With Most Oil Reserves [2017-18]",
+              subCaption: "In MMbbl = One Million barrels",
+              xAxisName: "Country",
+              yAxisName: "Reserves (MMbbl)",
+              numberSuffix: "K",
+              theme: "fusion",
+              bgColor: "#293946",
+              bgAlpha: "100",
+              labelFontColor: "#fff",
+              captionFontColor: "#fff"
+            },
+            data: []
+            };
 
   constructor(private dataService: SideMenuItemsService) {
-    this.dataSource = {
-      chart: {
-        caption: "Countries With Most Oil Reserves [2017-18]",
-        subCaption: "In MMbbl = One Million barrels",
-        xAxisName: "Country",
-        yAxisName: "Reserves (MMbbl)",
-        numberSuffix: "K",
-        theme: "fusion",
-        bgColor: "#293946",
-        bgAlpha: "100",
-        labelFontColor: "#fff",
-        captionFontColor: "#fff"
-      },
-        data: this.dataItem.chart-data
-    };
+     this.dataService.getJson("plant-chart-data").subscribe(chartData => {
+       this.dataSource.data = chartData.chart_data;
+      });
   }
 
   ngOnInit() {
-    this.dataService.getJson("plant-chrt-data").subscribe(data => {
-      this.dataItem = data;
-
-    });
   }
 
 }

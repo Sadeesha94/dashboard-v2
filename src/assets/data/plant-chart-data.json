@@ -1,78 +1,142 @@
-[
+
   {
-    "plant-name": "changi",
-    "plantId": 1,
-    "chart_data": [
-      {
-        "label": "Venezuela",
-        "value": "290"
-      },
-      {
-        "label": "Saudi",
-        "value": "290"
-      },
-      {
-        "label": "Canada",
-        "value": "180"
-      },
-      {
-        "label": "Iran",
-        "value": "140"
-      },
-      {
-        "label": "Russia",
-        "value": "115"
-      },
-      {
-        "label": "UAE",
-        "value": "100"
-      },
-      {
-        "label": "US",
-        "value": "30"
-      },
-      {
-        "label": "China",
-        "value": "30"
-      }
-    ]
-  },
-  {
-    "plant-name": "biopolic",
-    "plantId": 2,
-    "chart_data": [
-      {
-        "label": "Venezuela",
-        "value": "100"
-      },
-      {
-        "label": "Saudi",
-        "value": "200"
-      },
-      {
-        "label": "Canada",
-        "value": "180"
-      },
-      {
-        "label": "Iran",
-        "value": "50"
-      },
-      {
-        "label": "Russia",
-        "value": "40"
-      },
-      {
-        "label": "UAE",
-        "value": "500"
-      },
-      {
-        "label": "US",
-        "value": "200"
-      },
-      {
-        "label": "China",
-        "value": "112"
-      }
-    ]
+      "changi": [
+        {
+          "label": "Venezuela",
+          "value": "290"
+        },
+        {
+          "label": "Saudi",
+          "value": "290"
+        },
+        {
+          "label": "Canada",
+          "value": "180"
+        },
+        {
+          "label": "Iran",
+          "value": "140"
+        },
+        {
+          "label": "Russia",
+          "value": "115"
+        },
+        {
+          "label": "UAE",
+          "value": "100"
+        },
+        {
+          "label": "US",
+          "value": "30"
+        },
+        {
+          "label": "China",
+          "value": "30"
+        }
+      ],
+      "biopolis": [
+        {
+          "label": "Venezuela",
+          "value": "100"
+        },
+        {
+          "label": "Saudi",
+          "value": "200"
+        },
+        {
+          "label": "Canada",
+          "value": "300"
+        },
+        {
+          "label": "Iran",
+          "value": "400"
+        },
+        {
+          "label": "Russia",
+          "value": "10"
+        },
+        {
+          "label": "UAE",
+          "value": "20"
+        },
+        {
+          "label": "US",
+          "value": "30"
+        },
+        {
+          "label": "China",
+          "value": "40"
+        }
+      ],
+      "woodlands": [
+        {
+          "label": "Venezuela",
+          "value": "10"
+        },
+        {
+          "label": "Saudi",
+          "value": "20"
+        },
+        {
+          "label": "Canada",
+          "value": "30"
+        },
+        {
+          "label": "Iran",
+          "value": "40"
+        },
+        {
+          "label": "Russia",
+          "value": "50"
+        },
+        {
+          "label": "UAE",
+          "value": "60"
+        },
+        {
+          "label": "US",
+          "value": "70"
+        },
+        {
+          "label": "China",
+          "value": "80"
+        }
+      ],
+      "mediapolic": [
+        {
+          "label": "Venezuela",
+          "value": "100"
+        },
+        {
+          "label": "Saudi",
+          "value": "20"
+        },
+        {
+          "label": "Canada",
+          "value": "800"
+        },
+        {
+          "label": "Iran",
+          "value": "400"
+        },
+        {
+          "label": "Russia",
+          "value": "300"
+        },
+        {
+          "label": "UAE",
+          "value": "120"
+        },
+        {
+          "label": "US",
+          "value": "700"
+        },
+        {
+          "label": "China",
+          "value": "40"
+        }
+      ]
   }
-]
+
+
+

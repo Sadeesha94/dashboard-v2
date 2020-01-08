@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { SideMenuItemsService } from 'src/app/services/side-menu-items.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-plant-dashboard',
@@ -8,8 +9,9 @@ import { SideMenuItemsService } from 'src/app/services/side-menu-items.service';
 })
 export class PlantDashboardComponent implements OnInit {
 
+  plantName: string;
 
-  @Input() dataSource: any = {
+  dataSource: any = {
             chart: {
               caption: "Countries With Most Oil Reserves [2017-18]",
               subCaption: "In MMbbl = One Million barrels",
@@ -25,13 +27,20 @@ export class PlantDashboardComponent implements OnInit {
             data: []
             };
 
-  constructor(private dataService: SideMenuItemsService) {
-     this.dataService.getJson("plant-chart-data").subscribe(chartData => {
-       this.dataSource.data = chartData.chart_data;
-      });
+  constructor(private dataService: SideMenuItemsService, private route: ActivatedRoute) {
   }
 
   ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      this.plantName = params.get("plantName");
+      this.getData();
+    });
+  }
+  getData() {
+    this.dataService.getJson("plant-chart-data").subscribe(chartData => {
+      this.dataSource.data = chartData[this.plantName];
+      //console.log(chartData[this.plantName]);
+    });
   }
 
 }

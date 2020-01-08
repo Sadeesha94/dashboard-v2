@@ -25,10 +25,10 @@ import { RcmBillingComponent } from './billing/rcm-billing/rcm-billing.component
 import { DcsBillingComponent } from './billing/dcs-billing/dcs-billing.component';
 import { PlantDashboardComponent } from './dashboards/plant-dashboard/plant-dashboard.component';
 import { OverallBillingComponent } from './billing/overall-billing/overall-billing.component';
-import { ChangiPlantComponent } from './dashboards/plants/changi-plant/changi-plant.component';
-import { BiopolisPlantComponent } from './dashboards/plants/biopolis-plant/biopolis-plant.component';
-import { WoodlandsPlantComponent } from './dashboards/plants/woodlands-plant/woodlands-plant.component';
-import { MediapolicPlantComponent } from './dashboards/plants/mediapolic-plant/mediapolic-plant.component';
+import { Barchart3dComponent } from './widget/barchart3d/barchart3d.component';
+import { Piechart3dComponent } from './widget/piechart3d/piechart3d.component';
+import { Doughnut3dComponent } from './widget/doughnut3d/doughnut3d.component';
+import { Bar3dComponent } from './widget/bar3d/bar3d.component';
 
 import { FusionChartsModule } from 'angular-fusioncharts';
 
@@ -36,6 +36,7 @@ import { FusionChartsModule } from 'angular-fusioncharts';
 import * as FusionCharts from 'fusioncharts';
 import * as charts from 'fusioncharts/fusioncharts.charts';
 import * as FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
+
 
 
 FusionChartsModule.fcRoot(FusionCharts, charts, FusionTheme);
@@ -50,10 +51,10 @@ FusionChartsModule.fcRoot(FusionCharts, charts, FusionTheme);
     DcsBillingComponent,
     PlantDashboardComponent,
     OverallBillingComponent,
-    ChangiPlantComponent,
-    BiopolisPlantComponent,
-    WoodlandsPlantComponent,
-    MediapolicPlantComponent
+    Barchart3dComponent,
+    Piechart3dComponent,
+    Doughnut3dComponent,
+    Bar3dComponent
   ],
   imports: [
     BrowserModule,

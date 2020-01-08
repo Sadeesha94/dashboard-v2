@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WoodlandsPlantComponent } from './woodlands-plant.component';
+import { Barchart3dComponent } from './barchart3d.component';
 
-describe('WoodlandsPlantComponent', () => {
-  let component: WoodlandsPlantComponent;
-  let fixture: ComponentFixture<WoodlandsPlantComponent>;
+describe('Barchart3dComponent', () => {
+  let component: Barchart3dComponent;
+  let fixture: ComponentFixture<Barchart3dComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WoodlandsPlantComponent ]
+      declarations: [ Barchart3dComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(WoodlandsPlantComponent);
+    fixture = TestBed.createComponent(Barchart3dComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MediapolicPlantComponent } from './mediapolic-plant.component';
+import { Doughnut3dComponent } from './doughnut3d.component';
 
-describe('MediapolicPlantComponent', () => {
-  let component: MediapolicPlantComponent;
-  let fixture: ComponentFixture<MediapolicPlantComponent>;
+describe('Doughnut3dComponent', () => {
+  let component: Doughnut3dComponent;
+  let fixture: ComponentFixture<Doughnut3dComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MediapolicPlantComponent ]
+      declarations: [ Doughnut3dComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MediapolicPlantComponent);
+    fixture = TestBed.createComponent(Doughnut3dComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

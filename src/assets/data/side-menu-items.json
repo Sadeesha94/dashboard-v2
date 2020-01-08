@@ -5,19 +5,19 @@
         "subMenus": [
             {
               "item": "Changi",
-              "url": "/ChangiPlant"
+              "url": "/plant-dashboard/changi"
             },
             {
               "item": "Biopolis",
-              "url": "/BiopolisPlant"
+              "url": "/plant-dashboard/biopolis"
             },
             {
               "item": "Woodlands",
-              "url": "/WoodlandsPlant"
+              "url": "/plant-dashboard/woodlands"
             },
             {
               "item": "Mediapolic",
-              "url": "/MediapolicPlant"
+              "url": "/plant-dashboard/mediapolic"
             }
         ]
     },
@@ -27,19 +27,19 @@
         "subMenus": [
           {
             "item": "Changi",
-            "url": "/ChangiPlant"
+            "url": "/plant-dashboard/changi"
           },
           {
             "item": "Biopolis",
-            "url": "/BiopolisPlant"
+            "url": "/plant-dashboard/biopolis"
           },
           {
             "item": "Woodlands",
-            "url": "/WoodlandsPlant"
+            "url": "/plant-dashboard/woodlands"
           },
           {
             "item": "Mediapolic",
-            "url": "/MediapolicPlant"
+            "url": "/plant-dashboard/mediapolic"
           }
         ]
     },

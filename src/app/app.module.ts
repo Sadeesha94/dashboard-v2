@@ -1,5 +1,6 @@
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -12,6 +13,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDialogModule, MatTableModule, MatMenuModule, MatProgressSpinnerModule } from '@angular/material';
+
 
 import { SideMenuItemsService } from './services/side-menu-items.service';
 
@@ -29,6 +33,8 @@ import { Barchart3dComponent } from './widget/barchart3d/barchart3d.component';
 import { Piechart3dComponent } from './widget/piechart3d/piechart3d.component';
 import { Doughnut3dComponent } from './widget/doughnut3d/doughnut3d.component';
 import { Bar3dComponent } from './widget/bar3d/bar3d.component';
+import { LoginComponent } from './authentication/login/login.component';
+import { RegisterComponent } from './authentication/register/register.component';
 
 import { FusionChartsModule } from 'angular-fusioncharts';
 
@@ -36,6 +42,7 @@ import { FusionChartsModule } from 'angular-fusioncharts';
 import * as FusionCharts from 'fusioncharts';
 import * as charts from 'fusioncharts/fusioncharts.charts';
 import * as FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
+
 
 
 
@@ -54,12 +61,16 @@ FusionChartsModule.fcRoot(FusionCharts, charts, FusionTheme);
     Barchart3dComponent,
     Piechart3dComponent,
     Doughnut3dComponent,
-    Bar3dComponent
+    Bar3dComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatIconModule,
     MatToolbarModule,
     MatSidenavModule,
@@ -71,7 +82,12 @@ FusionChartsModule.fcRoot(FusionCharts, charts, FusionTheme);
     MatGridListModule,
     MatCardModule,
     MatButtonModule,
-    FusionChartsModule
+    FusionChartsModule,
+    MatCheckboxModule,
+    MatDialogModule,
+    MatTableModule,
+    MatMenuModule,
+    MatProgressSpinnerModule
   ],
   providers: [
     SideMenuItemsService,

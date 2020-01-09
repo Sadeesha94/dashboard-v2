@@ -2,6 +2,7 @@
     {
         "item": "DCS Dashboard",
         "url": "/dcs-dashboard",
+        "expanded": false,
         "subMenus": [
             {
               "item": "Changi",
@@ -24,6 +25,7 @@
     {
         "item": "RCM Dashboard",
         "url": "/rcm-dashboard",
+        "expanded": false,
         "subMenus": [
           {
             "item": "Changi",
@@ -46,6 +48,7 @@
     {
         "item": "Billing",
         "url": "/overall-billing",
+        "expanded": false,
         "subMenus": [
             {
                 "item": "DCS",
@@ -56,5 +59,11 @@
                 "url": "/rcm-billing"
             }
         ]
+    },
+    {
+      "item": "Login",
+      "url": "/login",
+      "expanded": false,
+      "subMenus": []
     }
 ]

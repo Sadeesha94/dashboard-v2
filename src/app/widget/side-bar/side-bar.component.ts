@@ -14,12 +14,11 @@ export class SideBarComponent implements OnInit {
 
   headerTitle: any;
 
-  panelOpenState = true;
+  expanded: boolean = false;
 
   menuItems: any = [];
 
   mobileQuery: MediaQueryList;
-
 
   private _mobileQueryListener: () => void;
 
@@ -46,6 +45,10 @@ export class SideBarComponent implements OnInit {
       this.menuItems = items;
 
     });
+  }
+
+  toggle() {
+    this.expanded = !this.expanded;
   }
 
   getTitle(state, parent) {

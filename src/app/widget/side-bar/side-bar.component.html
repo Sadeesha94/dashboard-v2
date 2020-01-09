@@ -15,12 +15,12 @@
 
           </mat-list-item>
 
-          <ng-template  #withSubMenu>
-                <mat-accordion *ngIf="item.subMenus.length > 0">
-                  <mat-expansion-panel class="list-acc mat-elevation-z0">
+          <ng-template  #withSubMenu >
+                <mat-accordion *ngIf="item.subMenus.length > 0" [multi]="false">
+                  <mat-expansion-panel class="list-acc mat-elevation-z0" [expanded]="expanded">
                     <mat-expansion-panel-header class="disable_ripple">
                       <mat-panel-title class="list-acc-title">
-                        <a class="a-list" mat-list-item routerLink="." [routerLink]="item.url" [routerLinkActive]="'active'">{{item.item}}</a>
+                        <a class="a-list" mat-list-item routerLink="." [routerLink]="item.url" [routerLinkActive]="'active'" (click)="toggle()">{{item.item}}</a>
                       </mat-panel-title>
                     </mat-expansion-panel-header>
 

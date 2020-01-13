@@ -35,6 +35,7 @@ import { Doughnut3dComponent } from './widget/doughnut3d/doughnut3d.component';
 import { Bar3dComponent } from './widget/bar3d/bar3d.component';
 import { LoginComponent } from './authentication/login/login.component';
 import { RegisterComponent } from './authentication/register/register.component';
+import { GaugeLinearComponent } from './widget/gauge-linear/gauge-linear.component';
 
 import { FusionChartsModule } from 'angular-fusioncharts';
 
@@ -42,11 +43,13 @@ import { FusionChartsModule } from 'angular-fusioncharts';
 import * as FusionCharts from 'fusioncharts';
 import * as charts from 'fusioncharts/fusioncharts.charts';
 import * as FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
+import * as Widgets from 'fusioncharts/fusioncharts.widgets';
 
 
 
 
-FusionChartsModule.fcRoot(FusionCharts, charts, FusionTheme);
+
+FusionChartsModule.fcRoot(FusionCharts, charts, FusionTheme, Widgets);
 
 @NgModule({
   declarations: [
@@ -63,7 +66,8 @@ FusionChartsModule.fcRoot(FusionCharts, charts, FusionTheme);
     Doughnut3dComponent,
     Bar3dComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    GaugeLinearComponent
   ],
   imports: [
     BrowserModule,

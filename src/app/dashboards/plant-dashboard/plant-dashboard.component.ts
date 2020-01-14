@@ -2,10 +2,6 @@ import { Component, OnInit, Input } from '@angular/core';
 import { SideMenuItemsService } from 'src/app/services/side-menu-items.service';
 import { ActivatedRoute } from '@angular/router';
 
-const data = {
-
-};
-
 @Component({
   selector: 'app-plant-dashboard',
   templateUrl: './plant-dashboard.component.html',
@@ -17,14 +13,25 @@ export class PlantDashboardComponent implements OnInit {
 
   cop: any = {
     chart: {
-      caption: "Chiller Plant COP",
-      subcaption: "System COP",
+
       numbersuffix: "[kWh/RTH]",
-      gaugefillmix: "{dark-00},{light+70},{dark-00}",
+      gaugefillmix: "{dark-40},{light+70},{dark-40}",
       theme: "fusion",
       bgColor: "#293946",
       baseFontColor: "#fff",
-      toolTipColor: "#000"
+      toolTipColor: "#000",
+      majorTMColor: "#000",
+      majorTMAlpha: "100",
+      placeTicksInside: true,
+      dashed: true,
+      dashLen: "10"
+
+      // pointerRadius: "10",
+      // pointerBgColor: "#fff",
+      // pointerSides: "2",
+      // pointerBorderThickness: "10",
+      // pointerBorderColor: "#000",
+      // showPointerShadow: true
     },
     colorrange: {
       color: [
@@ -58,12 +65,78 @@ export class PlantDashboardComponent implements OnInit {
       pointer: [
         {
           value: "0.698",
-          "displayValue": "Overall"
+          //"displayValue": "Overall"
         }
       ]
     }
   }
   ;
+
+  plantTotal: any = {
+    chart: {
+      caption: "Plant Total",
+      subcaption: "Peak-  Off-Peak",
+      xaxisname: "Item",
+      yaxisname: "Value [RTH]",
+      formatnumberscale: "1",
+      plottooltext:
+        "<b>$dataValue</b> $label consume in <b>$seriesName</b>",
+      theme: "fusion",
+      drawcrossline: "1",
+      bgColor: "#293946",
+      baseFontColor: "#fff",
+      labelFontColor: "#fff",
+      captionFontColor: "#fff",
+      toolTipColor: "#000"
+    },
+    categories: [
+      {
+        category: [
+          {
+            label: "Total Production Energy"
+          },
+          {
+            label: "Total Used Energy"
+          }
+        ]
+      }
+    ],
+    dataset: [
+      {
+        seriesname: "Peak Time",
+        data: [
+          {
+            value: "2056"
+          },
+          {
+            value: "40663"
+          }
+        ]
+      },
+      {
+        seriesname: "Off-Peak Time",
+        data: [
+          {
+            value: "49602.30"
+          },
+          {
+            value: "14344"
+          }
+        ]
+      },
+      {
+        seriesname: "Total",
+        data: [
+          {
+            value: "51658.30"
+          },
+          {
+            value: "55007"
+          }
+        ]
+      }
+    ]
+  };
 
   dataSource: any = {
             chart: {

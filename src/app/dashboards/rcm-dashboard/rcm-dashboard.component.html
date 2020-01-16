@@ -1,4 +1,53 @@
 <div class="container">
+  <mat-grid-list cols="2" rowHeight="550px">
+
+
+
+    <mat-grid-tile colspan="1" rowspan="1">
+      <mat-card class="example-card">
+        <app-grouped-column3d [dataSource]="plantTotal"></app-grouped-column3d>
+      </mat-card>
+    </mat-grid-tile>
+
+
+    <mat-grid-tile colspan="1" rowspan="1">
+      <mat-card class="example-card">
+        <app-bar3d [dataSource]="dataSource"></app-bar3d>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="1" rowspan="1">
+      <mat-card class="example-card">
+        <app-gauge-linear [dataSource]="cop1"></app-gauge-linear>
+        <app-gauge-linear [dataSource]="cop2"></app-gauge-linear>
+        <app-gauge-linear [dataSource]="cop3"></app-gauge-linear>
+        <app-gauge-linear [dataSource]="cop4"></app-gauge-linear>
+        <app-gauge-linear [dataSource]="cop5"></app-gauge-linear>
+      </mat-card>
+    </mat-grid-tile>
+
+
+    <!-- <mat-grid-tile colspan="1" rowspan="1">
+      <mat-card class="example-card">
+        <app-piechart3d [dataSource]="dataSource"></app-piechart3d>
+      </mat-card>
+    </mat-grid-tile> -->
+
+
+
+
+    <mat-grid-tile colspan="1" rowspan="1">
+      <mat-card class="example-card">
+        <app-doughnut3d [dataSource]="dataSource"></app-doughnut3d>
+      </mat-card>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+</div>
+
+
+
+<!-- <div class="container">
   <mat-grid-list cols="3" rowHeight="350px">
     <mat-grid-tile colspan="1" rowspan="1">
       <mat-card class="example-card">
@@ -43,4 +92,4 @@
   </mat-grid-list>
 
 </div>
-
+ -->

@@ -11,7 +11,238 @@ export class PlantDashboardComponent implements OnInit {
 
   plantName: string;
 
-  cop: any = {
+  databulb1: any = {
+    chart: {
+      caption: "COP1",
+      upperlimit: "0",
+      lowerlimit: "25",
+      usecolornameasvalue: "1",
+      placevaluesinside: "1",
+      valuefontsize: "20",
+      plottooltext: "$value[kWh/RTH]",
+      theme: "fusion",
+      bgColor: "#293946",
+      toolTipColor: "#000",
+      baseFontColor: "#fff",
+      // "showvalue": "1",
+      // "useColorNameAsValue": "1",
+      // "placeValuesInside": "1",
+      // "valueFontSize": "16",
+
+    },
+    colorrange: {
+      color: [
+        {
+          minvalue: "0",
+          maxvalue: "0.7",
+          label: "Excellent",
+          code: "#59A1D4"
+        },
+        {
+          minvalue: "0.7",
+          maxvalue: "0.85",
+          label: "Good",
+          code: "#43E62D"
+        },
+        {
+          minvalue: "0.85",
+          maxvalue: "1",
+          label: "Fair",
+          code: "#F5C926"
+        },
+        {
+          minvalue: "1",
+          maxvalue: "1.2",
+          label: "Need Improvement",
+          code: "#F54526"
+        }
+      ]
+    },
+    value: "0.573"
+  };
+
+  databulb2: any = {
+    chart: {
+      caption: "COP2",
+      upperlimit: "0",
+      lowerlimit: "25",
+      usecolornameasvalue: "1",
+      placevaluesinside: "1",
+      valuefontsize: "20",
+      plottooltext: "$value[kWh/RTH]",
+      theme: "fusion",
+      bgColor: "#293946",
+      toolTipColor: "#000",
+      baseFontColor: "#fff"
+    },
+    colorrange: {
+      color: [
+        {
+          minvalue: "0",
+          maxvalue: "0.7",
+          label: "Excellent",
+          code: "#59A1D4"
+        },
+        {
+          minvalue: "0.7",
+          maxvalue: "0.85",
+          label: "Good",
+          code: "#43E62D"
+        },
+        {
+          minvalue: "0.85",
+          maxvalue: "1",
+          label: "Fair",
+          code: "#F5C926"
+        },
+        {
+          minvalue: "1",
+          maxvalue: "1.2",
+          label: "Overloaded",
+          code: "#F54526"
+        }
+      ]
+    },
+    value: "1.1"
+  };
+
+  databulb3: any = {
+    chart: {
+      caption: "COP3",
+      upperlimit: "0",
+      lowerlimit: "25",
+      usecolornameasvalue: "1",
+      placevaluesinside: "1",
+      valuefontsize: "20",
+      plottooltext: "$value[kWh/RTH]",
+      theme: "fusion",
+      bgColor: "#293946",
+      toolTipColor: "#000",
+      baseFontColor: "#fff"
+    },
+    colorrange: {
+      color: [
+        {
+          minvalue: "0",
+          maxvalue: "0.7",
+          label: "Excellent",
+          code: "#59A1D4"
+        },
+        {
+          minvalue: "0.7",
+          maxvalue: "0.85",
+          label: "Good",
+          code: "#43E62D"
+        },
+        {
+          minvalue: "0.85",
+          maxvalue: "1",
+          label: "Fair",
+          code: "#F5C926"
+        },
+        {
+          minvalue: "1",
+          maxvalue: "1.2",
+          label: "Need Improvement",
+          code: "#F54526"
+        }
+      ]
+    },
+    value: "0.71"
+  };
+
+  databulb4: any = {
+    chart: {
+      caption: "COP4",
+      upperlimit: "0",
+      lowerlimit: "25",
+      usecolornameasvalue: "1",
+      placevaluesinside: "1",
+      valuefontsize: "20",
+      plottooltext: "$value[kWh/RTH]",
+      theme: "fusion",
+      bgColor: "#293946",
+      toolTipColor: "#000",
+      baseFontColor: "#fff"
+    },
+    colorrange: {
+      color: [
+        {
+          minvalue: "0",
+          maxvalue: "0.7",
+          label: "Excellent",
+          code: "#59A1D4"
+        },
+        {
+          minvalue: "0.7",
+          maxvalue: "0.85",
+          label: "Good",
+          code: "#43E62D"
+        },
+        {
+          minvalue: "0.85",
+          maxvalue: "1",
+          label: "Fair",
+          code: "#F5C926"
+        },
+        {
+          minvalue: "1",
+          maxvalue: "1.2",
+          label: "Need Improvement",
+          code: "#F54526"
+        }
+      ]
+    },
+    value: "0.9"
+  };
+
+  databulb5: any = {
+    chart: {
+      caption: "COP5",
+      upperlimit: "0",
+      lowerlimit: "25",
+      usecolornameasvalue: "1",
+      placevaluesinside: "1",
+      valuefontsize: "20",
+      plottooltext: "$value[kWh/RTH]",
+      theme: "fusion",
+      bgColor: "#293946",
+      toolTipColor: "#000",
+      baseFontColor: "#fff"
+    },
+    colorrange: {
+      color: [
+        {
+          minvalue: "0",
+          maxvalue: "0.7",
+          label: "Excellent",
+          code: "#59A1D4"
+        },
+        {
+          minvalue: "0.7",
+          maxvalue: "0.85",
+          label: "Good",
+          code: "#43E62D"
+        },
+        {
+          minvalue: "0.85",
+          maxvalue: "1",
+          label: "Fair",
+          code: "#F5C926"
+        },
+        {
+          minvalue: "1",
+          maxvalue: "1.2",
+          label: "Need Improvement",
+          code: "#F54526"
+        }
+      ]
+    },
+    value: "0.743"
+  };
+
+
+  cop1: any = {
     chart: {
 
       numbersuffix: "[kWh/RTH]",
@@ -20,18 +251,18 @@ export class PlantDashboardComponent implements OnInit {
       bgColor: "#293946",
       baseFontColor: "#fff",
       toolTipColor: "#000",
-      majorTMColor: "#000",
+      majorTMColor: "#fff",
       majorTMAlpha: "100",
-      placeTicksInside: true,
+      placeTicksInside: false,
       dashed: true,
-      dashLen: "10"
+      dashLen: "15",
 
-      // pointerRadius: "10",
-      // pointerBgColor: "#fff",
-      // pointerSides: "2",
-      // pointerBorderThickness: "10",
-      // pointerBorderColor: "#000",
-      // showPointerShadow: true
+      pointerRadius: "10",
+      pointerBgColor: "#fff",
+      pointerSides: "2",
+      pointerBorderThickness: "10",
+      pointerBorderColor: "#000",
+      showPointerShadow: true
     },
     colorrange: {
       color: [
@@ -64,13 +295,257 @@ export class PlantDashboardComponent implements OnInit {
     pointers: {
       pointer: [
         {
-          value: "0.698",
+          value: "0.573",
           //"displayValue": "Overall"
         }
       ]
     }
   }
   ;
+
+  cop2: any = {
+    chart: {
+
+      numbersuffix: "[kWh/RTH]",
+      gaugefillmix: "{dark-40},{light+70},{dark-40}",
+      theme: "fusion",
+      bgColor: "#293946",
+      baseFontColor: "#fff",
+      toolTipColor: "#000",
+      majorTMColor: "#fff",
+      majorTMAlpha: "100",
+      placeTicksInside: false,
+      dashed: true,
+      dashLen: "15",
+
+      pointerRadius: "10",
+      pointerBgColor: "#fff",
+      pointerSides: "2",
+      pointerBorderThickness: "10",
+      pointerBorderColor: "#000",
+      showPointerShadow: true
+    },
+    colorrange: {
+      color: [
+        {
+          minvalue: "0",
+          maxvalue: "0.7",
+          label: "Excellent",
+          code: "#59A1D4"
+        },
+        {
+          minvalue: "0.7",
+          maxvalue: "0.85",
+          label: "Good",
+          code: "#43E62D"
+        },
+        {
+          minvalue: "0.85",
+          maxvalue: "1",
+          label: "Fair",
+          code: "#F5C926"
+        },
+        {
+          minvalue: "1",
+          maxvalue: "1.2",
+          label: "Need Improvement",
+          code: "#F54526"
+        }
+      ]
+    },
+    pointers: {
+      pointer: [
+        {
+          value: "0.652",
+          //"displayValue": "Overall"
+        }
+      ]
+    }
+  }
+    ;
+
+  cop3: any = {
+    chart: {
+
+      numbersuffix: "[kWh/RTH]",
+      gaugefillmix: "{dark-40},{light+70},{dark-40}",
+      theme: "fusion",
+      bgColor: "#293946",
+      baseFontColor: "#fff",
+      toolTipColor: "#000",
+      majorTMColor: "#fff",
+      majorTMAlpha: "100",
+      placeTicksInside: false,
+      dashed: true,
+      dashLen: "15",
+
+      pointerRadius: "10",
+      pointerBgColor: "#fff",
+      pointerSides: "2",
+      pointerBorderThickness: "10",
+      pointerBorderColor: "#000",
+      showPointerShadow: true
+    },
+    colorrange: {
+      color: [
+        {
+          minvalue: "0",
+          maxvalue: "0.7",
+          label: "Excellent",
+          code: "#59A1D4"
+        },
+        {
+          minvalue: "0.7",
+          maxvalue: "0.85",
+          label: "Good",
+          code: "#43E62D"
+        },
+        {
+          minvalue: "0.85",
+          maxvalue: "1",
+          label: "Fair",
+          code: "#F5C926"
+        },
+        {
+          minvalue: "1",
+          maxvalue: "1.2",
+          label: "Need Improvement",
+          code: "#F54526"
+        }
+      ]
+    },
+    pointers: {
+      pointer: [
+        {
+          value: "0.500",
+          //"displayValue": "Overall"
+        }
+      ]
+    }
+  }
+    ;
+
+  cop4: any = {
+    chart: {
+
+      numbersuffix: "[kWh/RTH]",
+      gaugefillmix: "{dark-40},{light+70},{dark-40}",
+      theme: "fusion",
+      bgColor: "#293946",
+      baseFontColor: "#fff",
+      toolTipColor: "#000",
+      majorTMColor: "#fff",
+      majorTMAlpha: "100",
+      placeTicksInside: false,
+      dashed: true,
+      dashLen: "15",
+
+      pointerRadius: "10",
+      pointerBgColor: "#fff",
+      pointerSides: "2",
+      pointerBorderThickness: "10",
+      pointerBorderColor: "#000",
+      showPointerShadow: true
+    },
+    colorrange: {
+      color: [
+        {
+          minvalue: "0",
+          maxvalue: "0.7",
+          label: "Excellent",
+          code: "#59A1D4"
+        },
+        {
+          minvalue: "0.7",
+          maxvalue: "0.85",
+          label: "Good",
+          code: "#43E62D"
+        },
+        {
+          minvalue: "0.85",
+          maxvalue: "1",
+          label: "Fair",
+          code: "#F5C926"
+        },
+        {
+          minvalue: "1",
+          maxvalue: "1.2",
+          label: "Need Improvement",
+          code: "#F54526"
+        }
+      ]
+    },
+    pointers: {
+      pointer: [
+        {
+          value: "0.699",
+          //"displayValue": "Overall"
+        }
+      ]
+    }
+  }
+    ;
+
+  cop5: any = {
+    chart: {
+
+      numbersuffix: "[kWh/RTH]",
+      gaugefillmix: "{dark-40},{light+70},{dark-40}",
+      theme: "fusion",
+      bgColor: "#293946",
+      baseFontColor: "#fff",
+      toolTipColor: "#000",
+      majorTMColor: "#fff",
+      majorTMAlpha: "100",
+      placeTicksInside: false,
+      dashed: true,
+      dashLen: "15",
+
+      pointerRadius: "10",
+      pointerBgColor: "#fff",
+      pointerSides: "2",
+      pointerBorderThickness: "10",
+      pointerBorderColor: "#000",
+      showPointerShadow: true
+    },
+    colorrange: {
+      color: [
+        {
+          minvalue: "0",
+          maxvalue: "0.7",
+          label: "Excellent",
+          code: "#59A1D4"
+        },
+        {
+          minvalue: "0.7",
+          maxvalue: "0.85",
+          label: "Good",
+          code: "#43E62D"
+        },
+        {
+          minvalue: "0.85",
+          maxvalue: "1",
+          label: "Fair",
+          code: "#F5C926"
+        },
+        {
+          minvalue: "1",
+          maxvalue: "1.2",
+          label: "Need Improvement",
+          code: "#F54526"
+        }
+      ]
+    },
+    pointers: {
+      pointer: [
+        {
+          value: "0.743",
+          //"displayValue": "Overall"
+        }
+      ]
+    }
+  }
+    ;
 
   plantTotal: any = {
     chart: {
@@ -140,11 +615,11 @@ export class PlantDashboardComponent implements OnInit {
 
   dataSource: any = {
             chart: {
-              caption: "Countries With Most Oil Reserves [2017-18]",
-              subCaption: "In MMbbl = One Million barrels",
-              xAxisName: "Country",
-              yAxisName: "Reserves (MMbbl)",
-              numberSuffix: "K",
+              caption: "Cooling Tower Electricity Usage",
+              subCaption: "",
+              xAxisName: "Cooling Tower",
+              yAxisName: "Electricity [kWh]",
+              numberSuffix: "kWh",
               theme: "fusion",
               bgColor: "#293946",
               bgAlpha: "100",

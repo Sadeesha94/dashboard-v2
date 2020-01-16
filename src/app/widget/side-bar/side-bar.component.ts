@@ -14,8 +14,6 @@ export class SideBarComponent implements OnInit {
 
   headerTitle: any;
 
-  expanded: boolean = false;
-
   menuItems: any = [];
 
   mobileQuery: MediaQueryList;
@@ -45,10 +43,6 @@ export class SideBarComponent implements OnInit {
       this.menuItems = items;
 
     });
-  }
-
-  toggle() {
-    this.expanded = !this.expanded;
   }
 
   getTitle(state, parent) {

@@ -45,6 +45,7 @@ import * as charts from 'fusioncharts/fusioncharts.charts';
 import * as FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
 import * as Widgets from 'fusioncharts/fusioncharts.widgets';
 import { GroupedColumn3dComponent } from './widget/grouped-column3d/grouped-column3d.component';
+import { BulbComponent } from './widget/bulb/bulb.component';
 
 
 
@@ -69,7 +70,8 @@ FusionChartsModule.fcRoot(FusionCharts, charts, FusionTheme, Widgets);
     LoginComponent,
     RegisterComponent,
     GaugeLinearComponent,
-    GroupedColumn3dComponent
+    GroupedColumn3dComponent,
+    BulbComponent
   ],
   imports: [
     BrowserModule,

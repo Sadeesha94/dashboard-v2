@@ -15,6 +15,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDialogModule, MatTableModule, MatMenuModule, MatProgressSpinnerModule } from '@angular/material';
+import { ChartsModule } from "ng2-charts";
 
 
 import { SideMenuItemsService } from './services/side-menu-items.service';
@@ -36,6 +37,7 @@ import { Bar3dComponent } from './widget/bar3d/bar3d.component';
 import { LoginComponent } from './authentication/login/login.component';
 import { RegisterComponent } from './authentication/register/register.component';
 import { GaugeLinearComponent } from './widget/gauge-linear/gauge-linear.component';
+import { Column2dComponent } from './widget/column2d/column2d.component';
 
 import { FusionChartsModule } from 'angular-fusioncharts';
 
@@ -46,6 +48,7 @@ import * as FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
 import * as Widgets from 'fusioncharts/fusioncharts.widgets';
 import { GroupedColumn3dComponent } from './widget/grouped-column3d/grouped-column3d.component';
 import { BulbComponent } from './widget/bulb/bulb.component';
+
 
 
 
@@ -71,7 +74,8 @@ FusionChartsModule.fcRoot(FusionCharts, charts, FusionTheme, Widgets);
     RegisterComponent,
     GaugeLinearComponent,
     GroupedColumn3dComponent,
-    BulbComponent
+    BulbComponent,
+    Column2dComponent
   ],
   imports: [
     BrowserModule,
@@ -95,12 +99,10 @@ FusionChartsModule.fcRoot(FusionCharts, charts, FusionTheme, Widgets);
     MatDialogModule,
     MatTableModule,
     MatMenuModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    ChartsModule
   ],
-  providers: [
-    SideMenuItemsService,
-    Title
-  ],
+  providers: [SideMenuItemsService, Title],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

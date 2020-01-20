@@ -107,7 +107,7 @@ export class DcsDashboardComponent implements OnInit {
       toolTipColor: "#000",
       majorTMColor: "#fff",
       majorTMAlpha: "100",
-      placeTicksInside: true,
+      placeTicksInside: false,
       dashed: true,
       dashLen: "15",
 

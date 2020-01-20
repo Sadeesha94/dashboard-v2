@@ -3,15 +3,34 @@ import { SideMenuItemsService } from 'src/app/services/side-menu-items.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-plant-dashboard',
-  templateUrl: './plant-dashboard.component.html',
-  styleUrls: ['./plant-dashboard.component.scss']
+  selector: "app-plant-dashboard",
+  templateUrl: "./plant-dashboard.component.html",
+  styleUrls: ["./plant-dashboard.component.scss"]
 })
 export class PlantDashboardComponent implements OnInit {
-
   plantName: string;
   rthValue: any = 84254;
   kWhValue: any = 463100;
+
+  public barChartOptions = {
+    scaleShowVerticalLines: false,
+    responsive: true
+  };
+  public barChartLabels = [
+    "2006",
+    "2007",
+    "2008",
+    "2009",
+    "2010",
+    "2011",
+    "2012"
+  ];
+  public barChartType = "bar";
+  public barChartLegend = false;
+  public barChartData = [
+    { data: [65, 59, 80, 81, 56, 55, 40], label: "Series A" },
+    { data: [28, 48, 40, 19, 86, 27, 90], label: "Series B" }
+  ];
 
   databulb1: any = {
     chart: {
@@ -253,10 +272,8 @@ export class PlantDashboardComponent implements OnInit {
     value: "0.743"
   };
 
-
   cop1: any = {
     chart: {
-
       numbersuffix: "[kWh/RTH]",
       gaugefillmix: "{dark-40},{light+70},{dark-40}",
       theme: "fusion",
@@ -307,17 +324,15 @@ export class PlantDashboardComponent implements OnInit {
     pointers: {
       pointer: [
         {
-          value: "0.573",
+          value: "0.573"
           //"displayValue": "Overall"
         }
       ]
     }
-  }
-  ;
+  };
 
   cop2: any = {
     chart: {
-
       numbersuffix: "[kWh/RTH]",
       gaugefillmix: "{dark-40},{light+70},{dark-40}",
       theme: "fusion",
@@ -368,17 +383,15 @@ export class PlantDashboardComponent implements OnInit {
     pointers: {
       pointer: [
         {
-          value: "0.652",
+          value: "0.652"
           //"displayValue": "Overall"
         }
       ]
     }
-  }
-    ;
+  };
 
   cop3: any = {
     chart: {
-
       numbersuffix: "[kWh/RTH]",
       gaugefillmix: "{dark-40},{light+70},{dark-40}",
       theme: "fusion",
@@ -429,17 +442,15 @@ export class PlantDashboardComponent implements OnInit {
     pointers: {
       pointer: [
         {
-          value: "0.500",
+          value: "0.500"
           //"displayValue": "Overall"
         }
       ]
     }
-  }
-    ;
+  };
 
   cop4: any = {
     chart: {
-
       numbersuffix: "[kWh/RTH]",
       gaugefillmix: "{dark-40},{light+70},{dark-40}",
       theme: "fusion",
@@ -490,17 +501,15 @@ export class PlantDashboardComponent implements OnInit {
     pointers: {
       pointer: [
         {
-          value: "0.699",
+          value: "0.699"
           //"displayValue": "Overall"
         }
       ]
     }
-  }
-    ;
+  };
 
   cop5: any = {
     chart: {
-
       numbersuffix: "[kWh/RTH]",
       gaugefillmix: "{dark-40},{light+70},{dark-40}",
       theme: "fusion",
@@ -551,13 +560,12 @@ export class PlantDashboardComponent implements OnInit {
     pointers: {
       pointer: [
         {
-          value: "0.743",
+          value: "0.743"
           //"displayValue": "Overall"
         }
       ]
     }
-  }
-    ;
+  };
 
   plantTotal: any = {
     chart: {
@@ -566,8 +574,7 @@ export class PlantDashboardComponent implements OnInit {
       xaxisname: "Item",
       yaxisname: "Value [RTH]",
       formatnumberscale: "1",
-      plottooltext:
-        "<b>$dataValue</b> $label consume in <b>$seriesName</b>",
+      plottooltext: "<b>$dataValue</b> $label consume in <b>$seriesName</b>",
       theme: "fusion",
       drawcrossline: "1",
       bgColor: "#000000",
@@ -626,23 +633,28 @@ export class PlantDashboardComponent implements OnInit {
   };
 
   dataSource: any = {
-            chart: {
-              caption: "Cooling Tower Electricity Usage",
-              subCaption: "",
-              xAxisName: "Cooling Tower",
-              yAxisName: "Electricity [kWh]",
-              numberSuffix: "kWh",
-              theme: "fusion",
-              bgColor: "#000000",
-              bgAlpha: "100",
-              labelFontColor: "#fff",
-              captionFontColor: "#fff"
-            },
-            data: []
-            };
+    chart: {
+      // caption: "Cooling Tower Electricity Usage",
+      // subCaption: "",
+      // xAxisName: "Cooling Tower",
+      // yAxisName: "Electricity [kWh]",
+      // numberSuffix: "kWh",
+      theme: "fusion",
+      bgColor: "#414141",
+      showLabels: 0,
+      showYAxisValues: 0,
+      numDivLines: 0
+      // bgAlpha: "100",
+      // labelFontColor: "#fff",
+      // captionFontColor: "#fff"
+    },
+    data: []
+  };
 
-  constructor(private dataService: SideMenuItemsService, private route: ActivatedRoute) {
-  }
+  constructor(
+    private dataService: SideMenuItemsService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
@@ -656,5 +668,4 @@ export class PlantDashboardComponent implements OnInit {
       //console.log(chartData[this.plantName]);
     });
   }
-
 }

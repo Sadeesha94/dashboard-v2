@@ -1,5 +1,5 @@
 <div class="container">
-  <mat-grid-list cols="2" rowHeight="550px">
+  <mat-grid-list cols="2" rowHeight="600px">
 
 
 
@@ -18,11 +18,31 @@
 
     <mat-grid-tile colspan="1" rowspan="1">
       <mat-card class="example-card">
-        <app-gauge-linear [dataSource]="cop1"></app-gauge-linear>
-        <app-gauge-linear [dataSource]="cop2"></app-gauge-linear>
-        <app-gauge-linear [dataSource]="cop3"></app-gauge-linear>
-        <app-gauge-linear [dataSource]="cop4"></app-gauge-linear>
-        <app-gauge-linear [dataSource]="cop5"></app-gauge-linear>
+        <mat-grid-list cols="1" rowHeight="120px">
+          <mat-grid-tile colspan="1" rowspan="1">
+            <app-gauge-linear [dataSource]="cop1"></app-gauge-linear>
+          </mat-grid-tile>
+        </mat-grid-list>
+        <mat-grid-list cols="1" rowHeight="120px">
+          <mat-grid-tile colspan="1" rowspan="1">
+            <app-gauge-linear [dataSource]="cop2"></app-gauge-linear>
+          </mat-grid-tile>
+        </mat-grid-list>
+        <mat-grid-list cols="1" rowHeight="120px">
+          <mat-grid-tile colspan="1" rowspan="1">
+            <app-gauge-linear [dataSource]="cop3"></app-gauge-linear>
+          </mat-grid-tile>
+        </mat-grid-list>
+        <mat-grid-list cols="1" rowHeight="120px">
+          <mat-grid-tile colspan="1" rowspan="1">
+            <app-gauge-linear [dataSource]="cop4"></app-gauge-linear>
+          </mat-grid-tile>
+        </mat-grid-list>
+        <mat-grid-list cols="1" rowHeight="120px">
+          <mat-grid-tile colspan="1" rowspan="1">
+            <app-gauge-linear [dataSource]="cop5"></app-gauge-linear>
+          </mat-grid-tile>
+        </mat-grid-list>
       </mat-card>
     </mat-grid-tile>
 

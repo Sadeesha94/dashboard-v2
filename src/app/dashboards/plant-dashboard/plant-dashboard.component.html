@@ -2,38 +2,185 @@
 
 <div class="container">
 
-  <mat-grid-list cols="5" rowHeight="200px">
+  <mat-grid-list cols="12" rowHeight="300px">
+
+    <mat-grid-tile colspan="2" rowspan="1">
+      <mat-card class="example-card2">
+        <mat-card class="example-card3">
+          <mat-card-header>
+            <mat-card-title class="title">Total Production Energy</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="content">
+              <p class="value2">
+                <b>{{rthValue}}</b> RTH
+              </p>
+              <mat-icon class="icon">trending_up</mat-icon>
+            </div>
+            <!-- <app-bar3d [dataSource]="dataSource"></app-bar3d> -->
+          </mat-card-content>
+        </mat-card>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="2" rowspan="1">
+      <mat-card class="example-card2">
+        <mat-card class="example-card3">
+          <mat-card-header>
+            <mat-card-title class="title">Total Used Energy</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p>
+              hunting.
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="3" rowspan="1">
+      <mat-card class="example-card2">
+        <mat-card class="example-card3">
+          <mat-card-header>
+            <mat-card-title class="title">Production Loss</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p>
+              hunting.
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="5" rowspan="1">
+      <mat-card class="example-card2">
+        <mat-card class="example-card3">
+          <mat-card-header>
+            <mat-card-title class="title">Production By ECC</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p>
+              hunting.
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </mat-card>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+
+  <mat-grid-list cols="5" rowHeight="300px">
 
     <mat-grid-tile colspan="1" rowspan="1">
       <mat-card class="example-card">
-        <app-bulb [dataSource]="databulb1"></app-bulb>
+        <mat-grid-list cols="1" rowHeight="200px">
+          <mat-grid-tile colspan="1" rowspan="1">
+            <mat-card class="example-card">
+              <app-bulb [dataSource]="databulb1"></app-bulb>
+            </mat-card>
+          </mat-grid-tile>
+          <mat-grid-tile colspan="1" rowspan="1">
+            <mat-card class="example-card">
+              <p class="value">
+                <b>Production</b>: {{rthValue}} RTH
+              <br>
+              <br>
+                <b>Electricity</b>: {{kWhValue}} kWh
+              </p>
+            </mat-card>
+          </mat-grid-tile>
+        </mat-grid-list>
+        <!-- <app-bulb [dataSource]="databulb1"></app-bulb> -->
+
       </mat-card>
     </mat-grid-tile>
     <mat-grid-tile colspan="1" rowspan="1">
       <mat-card class="example-card">
-        <app-bulb [dataSource]="databulb2"></app-bulb>
+        <mat-grid-list cols="1" rowHeight="200px">
+          <mat-grid-tile colspan="1" rowspan="1">
+            <mat-card class="example-card">
+              <app-bulb [dataSource]="databulb2"></app-bulb>
+            </mat-card>
+          </mat-grid-tile>
+          <mat-grid-tile colspan="1" rowspan="1">
+            <mat-card class="example-card">
+              <p class="value">
+                <b>Production</b>: {{rthValue}} RTH
+                <br>
+                <br>
+                <b>Electricity</b>: {{kWhValue}} kWh
+              </p>
+            </mat-card>
+          </mat-grid-tile>
+        </mat-grid-list>
       </mat-card>
     </mat-grid-tile>
     <mat-grid-tile colspan="1" rowspan="1">
       <mat-card class="example-card">
-        <app-bulb [dataSource]="databulb3"></app-bulb>
+        <mat-grid-list cols="1" rowHeight="200px">
+          <mat-grid-tile colspan="1" rowspan="1">
+            <mat-card class="example-card">
+              <app-bulb [dataSource]="databulb3"></app-bulb>
+            </mat-card>
+          </mat-grid-tile>
+          <mat-grid-tile colspan="1" rowspan="1">
+            <mat-card class="example-card">
+              <p class="value">
+                <b>Production</b>: {{rthValue}} RTH
+                <br>
+                <br>
+                <b>Electricity</b>: {{kWhValue}} kWh
+              </p>
+            </mat-card>
+          </mat-grid-tile>
+        </mat-grid-list>
       </mat-card>
     </mat-grid-tile>
     <mat-grid-tile colspan="1" rowspan="1">
       <mat-card class="example-card">
-        <app-bulb [dataSource]="databulb4"></app-bulb>
+        <mat-grid-list cols="1" rowHeight="200px">
+          <mat-grid-tile colspan="1" rowspan="1">
+            <mat-card class="example-card">
+              <app-bulb [dataSource]="databulb4"></app-bulb>
+            </mat-card>
+          </mat-grid-tile>
+          <mat-grid-tile colspan="1" rowspan="1">
+            <mat-card class="example-card">
+              <p class="value">
+                <b>Production</b>: {{rthValue}} RTH
+                <br>
+                <br>
+                <b>Electricity</b>: {{kWhValue}} kWh
+              </p>
+            </mat-card>
+          </mat-grid-tile>
+        </mat-grid-list>
       </mat-card>
     </mat-grid-tile>
     <mat-grid-tile colspan="1" rowspan="1">
       <mat-card class="example-card">
-        <app-bulb [dataSource]="databulb5"></app-bulb>
+        <mat-grid-list cols="1" rowHeight="200px">
+          <mat-grid-tile colspan="1" rowspan="1">
+            <mat-card class="example-card">
+              <app-bulb [dataSource]="databulb5"></app-bulb>
+            </mat-card>
+          </mat-grid-tile>
+          <mat-grid-tile colspan="1" rowspan="1">
+            <mat-card class="example-card">
+              <p class="value">
+                <b>Production</b>: {{rthValue}} RTH
+                <br>
+                <br>
+                <b>Electricity</b>: {{kWhValue}} kWh
+              </p>
+            </mat-card>
+          </mat-grid-tile>
+        </mat-grid-list>
       </mat-card>
     </mat-grid-tile>
 
   </mat-grid-list>
 
 
-  <mat-grid-list cols="2" rowHeight="550px">
+  <mat-grid-list cols="2" rowHeight="400px">
 
     <!-- <mat-grid-tile colspan="1" rowspan="1">
       <mat-card class="example-card">

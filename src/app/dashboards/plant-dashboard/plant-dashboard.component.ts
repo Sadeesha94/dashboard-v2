@@ -10,25 +10,25 @@ import { ActivatedRoute } from '@angular/router';
 export class PlantDashboardComponent implements OnInit {
 
   plantName: string;
+  rthValue: any = 84254;
+  kWhValue: any = 463100;
 
   databulb1: any = {
     chart: {
       caption: "COP1",
       upperlimit: "0",
       lowerlimit: "25",
-      usecolornameasvalue: "1",
-      placevaluesinside: "1",
-      valuefontsize: "20",
+      numberSuffix: "[kWh/RTH]",
+      showvalue: "1",
+      placeValuesInside: "1",
+      useColorNameAsValue: "0",
+      valuefontsize: "14",
       plottooltext: "$value[kWh/RTH]",
       theme: "fusion",
-      bgColor: "#293946",
+      bgColor: "#000000",
       toolTipColor: "#000",
       baseFontColor: "#fff",
-      // "showvalue": "1",
-      // "useColorNameAsValue": "1",
-      // "placeValuesInside": "1",
-      // "valueFontSize": "16",
-
+      is3D: "1"
     },
     colorrange: {
       color: [
@@ -66,14 +66,17 @@ export class PlantDashboardComponent implements OnInit {
       caption: "COP2",
       upperlimit: "0",
       lowerlimit: "25",
-      usecolornameasvalue: "1",
-      placevaluesinside: "1",
-      valuefontsize: "20",
+      numberSuffix: "[kWh/RTH]",
+      showvalue: "1",
+      placeValuesInside: "1",
+      useColorNameAsValue: "0",
+      valuefontsize: "14",
       plottooltext: "$value[kWh/RTH]",
       theme: "fusion",
-      bgColor: "#293946",
+      bgColor: "#000000",
       toolTipColor: "#000",
-      baseFontColor: "#fff"
+      baseFontColor: "#fff",
+      is3D: "1"
     },
     colorrange: {
       color: [
@@ -111,14 +114,17 @@ export class PlantDashboardComponent implements OnInit {
       caption: "COP3",
       upperlimit: "0",
       lowerlimit: "25",
-      usecolornameasvalue: "1",
-      placevaluesinside: "1",
-      valuefontsize: "20",
+      numberSuffix: "[kWh/RTH]",
+      showvalue: "1",
+      placeValuesInside: "1",
+      useColorNameAsValue: "0",
+      valuefontsize: "14",
       plottooltext: "$value[kWh/RTH]",
       theme: "fusion",
-      bgColor: "#293946",
+      bgColor: "#000000",
       toolTipColor: "#000",
-      baseFontColor: "#fff"
+      baseFontColor: "#fff",
+      is3D: "1"
     },
     colorrange: {
       color: [
@@ -156,14 +162,17 @@ export class PlantDashboardComponent implements OnInit {
       caption: "COP4",
       upperlimit: "0",
       lowerlimit: "25",
-      usecolornameasvalue: "1",
-      placevaluesinside: "1",
-      valuefontsize: "20",
+      numberSuffix: "[kWh/RTH]",
+      showvalue: "1",
+      placeValuesInside: "1",
+      useColorNameAsValue: "0",
+      valuefontsize: "14",
       plottooltext: "$value[kWh/RTH]",
       theme: "fusion",
-      bgColor: "#293946",
+      bgColor: "#000000",
       toolTipColor: "#000",
-      baseFontColor: "#fff"
+      baseFontColor: "#fff",
+      is3D: "1"
     },
     colorrange: {
       color: [
@@ -201,14 +210,17 @@ export class PlantDashboardComponent implements OnInit {
       caption: "COP5",
       upperlimit: "0",
       lowerlimit: "25",
-      usecolornameasvalue: "1",
-      placevaluesinside: "1",
-      valuefontsize: "20",
+      numberSuffix: "[kWh/RTH]",
+      showvalue: "1",
+      placeValuesInside: "1",
+      useColorNameAsValue: "0",
+      valuefontsize: "14",
       plottooltext: "$value[kWh/RTH]",
       theme: "fusion",
-      bgColor: "#293946",
+      bgColor: "#000000",
       toolTipColor: "#000",
-      baseFontColor: "#fff"
+      baseFontColor: "#fff",
+      is3D: "1"
     },
     colorrange: {
       color: [
@@ -248,7 +260,7 @@ export class PlantDashboardComponent implements OnInit {
       numbersuffix: "[kWh/RTH]",
       gaugefillmix: "{dark-40},{light+70},{dark-40}",
       theme: "fusion",
-      bgColor: "#293946",
+      bgColor: "#000000",
       baseFontColor: "#fff",
       toolTipColor: "#000",
       majorTMColor: "#fff",
@@ -309,7 +321,7 @@ export class PlantDashboardComponent implements OnInit {
       numbersuffix: "[kWh/RTH]",
       gaugefillmix: "{dark-40},{light+70},{dark-40}",
       theme: "fusion",
-      bgColor: "#293946",
+      bgColor: "#000000",
       baseFontColor: "#fff",
       toolTipColor: "#000",
       majorTMColor: "#fff",
@@ -370,7 +382,7 @@ export class PlantDashboardComponent implements OnInit {
       numbersuffix: "[kWh/RTH]",
       gaugefillmix: "{dark-40},{light+70},{dark-40}",
       theme: "fusion",
-      bgColor: "#293946",
+      bgColor: "#000000",
       baseFontColor: "#fff",
       toolTipColor: "#000",
       majorTMColor: "#fff",
@@ -431,7 +443,7 @@ export class PlantDashboardComponent implements OnInit {
       numbersuffix: "[kWh/RTH]",
       gaugefillmix: "{dark-40},{light+70},{dark-40}",
       theme: "fusion",
-      bgColor: "#293946",
+      bgColor: "#000000",
       baseFontColor: "#fff",
       toolTipColor: "#000",
       majorTMColor: "#fff",
@@ -492,7 +504,7 @@ export class PlantDashboardComponent implements OnInit {
       numbersuffix: "[kWh/RTH]",
       gaugefillmix: "{dark-40},{light+70},{dark-40}",
       theme: "fusion",
-      bgColor: "#293946",
+      bgColor: "#000000",
       baseFontColor: "#fff",
       toolTipColor: "#000",
       majorTMColor: "#fff",
@@ -558,7 +570,7 @@ export class PlantDashboardComponent implements OnInit {
         "<b>$dataValue</b> $label consume in <b>$seriesName</b>",
       theme: "fusion",
       drawcrossline: "1",
-      bgColor: "#293946",
+      bgColor: "#000000",
       baseFontColor: "#fff",
       labelFontColor: "#fff",
       captionFontColor: "#fff",
@@ -621,7 +633,7 @@ export class PlantDashboardComponent implements OnInit {
               yAxisName: "Electricity [kWh]",
               numberSuffix: "kWh",
               theme: "fusion",
-              bgColor: "#293946",
+              bgColor: "#000000",
               bgAlpha: "100",
               labelFontColor: "#fff",
               captionFontColor: "#fff"

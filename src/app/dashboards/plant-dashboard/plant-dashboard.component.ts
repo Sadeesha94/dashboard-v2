@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { SideMenuItemsService } from 'src/app/services/side-menu-items.service';
 import { ActivatedRoute } from '@angular/router';
+import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
+import { Label } from 'ng2-charts';
 
 @Component({
   selector: "app-plant-dashboard",
@@ -12,24 +14,24 @@ export class PlantDashboardComponent implements OnInit {
   rthValue: any = 84254;
   kWhValue: any = 463100;
 
-  public barChartOptions = {
-    scaleShowVerticalLines: false,
-    responsive: true
+  barChartOptions: ChartOptions = {
+    scales: {
+      xAxes: [{
+        display: false
+      }],
+      yAxes: [{
+        display: false
+      }],
+    },
+    responsive: true,
   };
-  public barChartLabels = [
-    "2006",
-    "2007",
-    "2008",
-    "2009",
-    "2010",
-    "2011",
-    "2012"
-  ];
-  public barChartType = "bar";
-  public barChartLegend = false;
-  public barChartData = [
-    { data: [65, 59, 80, 81, 56, 55, 40], label: "Series A" },
-    { data: [28, 48, 40, 19, 86, 27, 90], label: "Series B" }
+  barChartLabels: Label[] = ['Apple', 'Banana', 'Kiwifruit', 'Blueberry', 'Orange', 'Grapes'];
+  barChartType: ChartType = 'bar';
+  barChartLegend = false;
+  barChartPlugins = [];
+
+  barChartData: ChartDataSets[] = [
+    { data: [45, 37, 60, 70, 46, 33], label: 'Best Fruits', backgroundColor: '#3e95cd' }
   ];
 
   databulb1: any = {
@@ -634,19 +636,19 @@ export class PlantDashboardComponent implements OnInit {
 
   dataSource: any = {
     chart: {
-      // caption: "Cooling Tower Electricity Usage",
-      // subCaption: "",
-      // xAxisName: "Cooling Tower",
-      // yAxisName: "Electricity [kWh]",
-      // numberSuffix: "kWh",
+      caption: "Cooling Tower Electricity Usage",
+      subCaption: "",
+      xAxisName: "Cooling Tower",
+      yAxisName: "Electricity [kWh]",
+      numberSuffix: "kWh",
       theme: "fusion",
-      bgColor: "#414141",
-      showLabels: 0,
-      showYAxisValues: 0,
-      numDivLines: 0
-      // bgAlpha: "100",
-      // labelFontColor: "#fff",
-      // captionFontColor: "#fff"
+      bgColor: "#000000",
+      // showLabels: 0,
+      // showYAxisValues: 0,
+      // numDivLines: 0
+      bgAlpha: "100",
+      labelFontColor: "#fff",
+      captionFontColor: "#fff"
     },
     data: []
   };
